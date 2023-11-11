@@ -1,0 +1,128 @@
+nav {
+  @include flex(row, center, space-between, 0);
+  padding: var(--size-fluid-2) var(--size-fluid-4);
+  position: relative;
+
+  .logo {
+    font-size: var(--font-size-4);
+    font-weight: bold;
+    color: $black;
+  }
+
+  .menu__button {
+    all: unset;
+    cursor: pointer;
+    padding: 7px 15px;
+    background-color: $black;
+    box-shadow: 0 0 1em $bg-gray;
+    color: $white;
+    display: none;
+  }
+
+  .nav__links {
+    @include flex(row, center, center, 1.5em);
+
+    li {
+      a {
+        color: $black;
+        font-weight: 500;
+        font-size: var(--font-size-2);
+      }
+    }
+
+    li:not(.nav__links--cta) {
+      a {
+        &::after {
+          display: block;
+          margin-top: 0.5px;
+          content: "";
+          height: 1px;
+          width: 0;
+          background-color: $black;
+          transition: all 0.3s var(--ease-2);
+        }
+
+        &:hover {
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .nav__links--cta {
+      a {
+        padding: 12px 24px;
+        color: $white;
+        background-color: $green;
+      }
+    }
+  }
+
+  .menu {
+    z-index: 1;
+    transition: all 0.3s var(--ease-2);
+    transform-origin: left -50%;
+    position: absolute;
+    left: 50%;
+    top: calc(100% + var(--size-fluid-8));
+    background-color: $black;
+    transform: translate(-50%, -50%);
+    width: 100dvw;
+    padding: 1.75rem;
+    @include flex(column, center, center, 1rem);
+
+    button {
+      all: unset;
+      cursor: pointer;
+      color: $white;
+    }
+
+    span {
+      a {
+        font-size: var(--font-size-4);
+        color: $white;
+        font-weight: 500;
+
+        &::after {
+          display: block;
+          margin-top: 0.5px;
+          content: "";
+          height: 1px;
+          width: 0;
+          background-color: $black;
+          transition: all 0.3s var(--ease-2);
+        }
+
+        &:hover {
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .cta {
+      padding: 7px 15px;
+      width: 10rem;
+      @include flex(row, center, center, 0);
+      font-size: var(--font-size-2);
+      color: $white;
+      background-color: $green;
+      white-space: nowrap;
+    }
+  }
+}
+
+
+@media (max-width: 690px){
+    nav{
+        .menu__button{
+            display: inline-flex;
+        }
+
+        .nav__links{
+            display: none;
+        }
+    }
+}

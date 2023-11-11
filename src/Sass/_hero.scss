@@ -1,0 +1,51 @@
+.hero__section{
+    @include flex(row, center, space-between, 0);
+    padding: var(--size-fluid-5) var(--size-fluid-4);
+
+    &--content{
+        @include flex(column, flex-start, flex-start, 2rem);
+
+        h1{
+            color: $black;
+            font-size: var(--font-size-fluid-3);
+            font-weight: bold;
+        }
+
+        p{
+            color: $black;
+            font-size: var(--font-size-2);
+        }
+
+        a{
+            padding: 12px 24px;
+            color: $white;
+            background-color: $green;
+            font-size: var(--font-size-2);
+        }
+    }
+
+    img{
+        width: 33.33%;
+        height: auto;
+        max-height: 100%;
+        object-fit: scale-down;
+        border-radius: 15px;
+    }
+}
+
+@media (max-width: 1024px){
+    .hero__section{
+        flex-direction: column;
+        gap: 2rem;
+
+        &--content{
+            @include flex(column, center, center, 1.75rem);
+            text-align: center;
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}

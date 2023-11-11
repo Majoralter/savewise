@@ -1,0 +1,27 @@
+.marquee__container {
+  width: 100dvw;
+  background-color: #00100B;
+  padding-block: 8px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transform: rotate(-1.5deg);
+
+  .marquee__slider {
+    @include flex(row, center, center, 1rem);
+
+    .slide {
+        @extend .marquee__slider;
+      span {
+        color: $white;
+        font-size: var(--font-size-4);
+        font-weight: 500;
+      }
+
+      img {
+        height: 32px;
+        width: auto;
+      }
+    }
+  }
+}
