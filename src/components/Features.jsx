@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const Features = () => {
   const features = [
     {
@@ -29,7 +31,11 @@ const Features = () => {
 
   const feature = features.map((item, index) => {
     return (
-      <div className="feature" key={index} style={{borderRight: `solid 2px ${item.borderColor}`}}>
+      <div
+        className="feature"
+        key={index}
+        style={{ borderRight: `solid 2px ${item.borderColor}` }}
+      >
         <h3>{item.header}</h3>
         <p>{item.body}</p>
         <a href="#">
@@ -52,9 +58,7 @@ const Features = () => {
         </p>
       </div>
 
-      <div className="features">
-        {feature}
-      </div>
+      <div className="features">{feature}</div>
     </section>
   );
 };

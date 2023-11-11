@@ -1,12 +1,14 @@
 @import "https://unpkg.com/open-props";
 
-*,*::before,*::after{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
-    font-family: 'Darker Grotesque', sans-serif;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Darker Grotesque", sans-serif;
 }
 
 // colors
@@ -18,37 +20,34 @@ $orange-border: #ff8e0a;
 $lime-border: #50ff00;
 $yellow-green-border: #fbff00;
 $purple-border: #7482ff;
-$green-border: #06E19B;
+$green-border: #06e19b;
 $text-gray: #555555;
 $bg-gray: #fefefe;
 $gradient-black: #141414;
 
-body,html{
-    overflow-x: hidden;
-    position: relative;
+body,
+html {
+  overflow-x: hidden;
+  position: relative;
 }
 
-body{
-    min-height: 100dvh;
+body {
+  min-height: 100dvh;
 }
 
-h4{
-    text-transform: uppercase;
+h4 {
+  text-transform: uppercase;
 }
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
 // mixins
-@mixin flex($flex-direction, $align-items, $justify-content, $gap){
-    display: flex;
-    flex-direction: $flex-direction;
-    align-items: $align-items;
-    justify-content: $justify-content;
-    gap: $gap;
+@mixin flex($flex-direction, $align-items, $justify-content, $gap) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  gap: $gap;
 }

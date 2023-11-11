@@ -18,20 +18,21 @@
     // white-space: nowrap;
   }
 
-  img{
+  img {
     width: 100%;
     height: auto;
     max-height: 60dvh;
     object-fit: cover;
     margin-top: 1.75rem;
     border-radius: 15px;
+    background-attachment: fixed;
   }
 }
 
-@media (max-width: 600px){
-    .mission__section{
-        br{
-            display: none;
-        }
+@media (max-width: 600px) {
+  .mission__section {
+    br {
+      display: none;
     }
+  }
 }
