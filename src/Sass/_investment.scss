@@ -23,6 +23,7 @@
     @include flex(row, center, space-between, 0);
     width: 60%;
     height: 80%;
+    margin-top: 50px;
 
     .calculator {
       background-color: $green;
@@ -75,7 +76,7 @@
     }
 
     &--content {
-      @include flex(column, center, center, 1.25rem);
+      @include flex(column, center, center, .5rem);
 
       h3{
         font-size: var(--font-size-8);
@@ -83,8 +84,26 @@
       }
 
       p {
+        text-align: center;
         color: $white;
         font-size: var(--font-size-3);
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px){
+  .investment__section{
+    height: fit-content;
+    .output{
+      flex-direction: column;
+
+      .calculator{
+        label{
+          input{
+            width: 85%;
+          }
+        }
       }
     }
   }
