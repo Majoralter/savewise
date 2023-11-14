@@ -1,6 +1,5 @@
 import Piggy from "/images/Piggy.png";
 import Invest from "/images/Invest.png";
-import gsap from "gsap";
 import Marquee from "react-fast-marquee";
 
 const MarqueeSlider = () => {
