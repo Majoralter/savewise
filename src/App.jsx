@@ -7,6 +7,8 @@ import Mission from "./components/Mission";
 import Calculator from "./components/Calculator";
 import Testimonial from "./components/Testimonial";
 import FAQ from "./components/FAQ";
+import Cta from "./components/Cta";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <Calculator />
       <Testimonial />
       <FAQ />
+      <Cta />
+      <Footer />
     </>
   );
 }
