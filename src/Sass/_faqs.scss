@@ -1,0 +1,75 @@
+.faq__section {
+  padding: var(--size-fluid-2) var(--size-fluid-4);
+  @include flex(column, center, center, 0.5rem);
+
+  h4 {
+    color: $text-gray;
+  }
+
+  h2 {
+    font-size: var(--font-size-fluid-2);
+    color: $black;
+  }
+
+  .faqs {
+    @include flex(column, flex-start, flex-start, 1.75rem);
+    width: 50%;
+    margin-top: 30px;
+
+    .question {
+      @include flex(column, flex-start, flex-start, 1em);
+      width: 100%;
+
+      h3 {
+        color: $green;
+        font-size: var(--font-size-fluid-1);
+      }
+
+      .question--wrapper {
+        @include flex(column, flex-start, flex-start, 1em);
+        width: 100%;
+        border-top: solid 1px $green;
+        border-bottom: solid 1px $green;
+        padding-block: var(--size-2);
+        cursor: pointer;
+
+        .controls {
+          @include flex(row, center, space-between, 0);
+          width: 100%;
+
+          h5 {
+            font-size: var(--font-size-3);
+            font-weight: 500;
+          }
+
+          span{
+            font-size: var(--font-size-2);
+          }
+        }
+
+        p {
+          color: $black;
+          font-size: var(--font-size-2);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .faq__section {
+    .faqs {
+      width: 100%;
+
+      .question {
+        .question--wrapper {
+          .controls {
+            h5 {
+              font-size: var(--font-size-fluid-1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
