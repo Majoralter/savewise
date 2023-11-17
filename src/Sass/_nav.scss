@@ -2,6 +2,7 @@ nav {
   @include flex(row, center, space-between, 0);
   padding: var(--size-fluid-2) var(--size-fluid-4);
   position: relative;
+  background-color: #eefcf7;
 
   .logo {
     font-size: var(--font-size-4);
@@ -114,15 +115,14 @@ nav {
   }
 }
 
-
-@media (max-width: 690px){
-    nav{
-        .menu__button{
-            display: inline-flex;
-        }
-
-        .nav__links{
-            display: none;
-        }
+@media (max-width: 690px) {
+  nav {
+    .menu__button {
+      display: inline-flex;
     }
+
+    .nav__links {
+      display: none;
+    }
+  }
 }

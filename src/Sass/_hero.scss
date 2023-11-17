@@ -1,6 +1,7 @@
 .hero__section {
   @include flex(row, center, space-between, 0);
   padding: var(--size-fluid-5) var(--size-fluid-4);
+  background-color: #eefcf7;
 
   &--content {
     @include flex(column, flex-start, flex-start, 2rem);
